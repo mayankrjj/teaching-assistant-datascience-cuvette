@@ -42,7 +42,7 @@ This project demonstrates my ability to solve technical problems, explain concep
 - Dashboards cover:
   - Revenue by Country & Genre
   - Artist-wise sales trends
-- **Public Link:** [(https://public.tableau.com/app/profile/mayank.rajput6198/viz/AirBnBFullProject_17405630156910/Dashboard1)](#)
+- **Public Link:** [https://public.tableau.com/app/profile/mayank.rajput6198/viz/AirBnBFullProject_17405630156910/Dashboard1](#)
 
 ---
 
