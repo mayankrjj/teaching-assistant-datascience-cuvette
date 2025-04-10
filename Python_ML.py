@@ -1,6 +1,6 @@
 # Section 1: Python + Machine Learning – Cuvette TA Assignment
 
-#  Step 1: Import Libraries
+#Import Libraries
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -11,7 +11,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, classification_report
 
-#  Step 2: Load the Dataset
+#Load the Dataset
 df = pd.read_csv("StudentsPerformance.csv")
 df.head()
 #  Step 3: Data Cleaning
@@ -78,7 +78,7 @@ evaluate_model("Logistic Regression", y_test, log_preds)
 evaluate_model("Random Forest", y_test, rf_preds)
 # Conclusion:
 # - The dataset was clean with no missing values.
-# - We created a binary classification target: Pass (>=40 average score) vs Fail.
+# - I created a binary classification target: Pass (>=40 average score) vs Fail.
 # - Random Forest slightly outperformed Logistic Regression.
 # - Feature encoding was done using LabelEncoder.
 # - EDA revealed that parental education and test prep had visible effects on pass rates.
