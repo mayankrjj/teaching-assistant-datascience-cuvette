@@ -48,32 +48,24 @@ ORDER BY
 
 -- 4️⃣ For each artist, find their most sold album
 WITH AlbumSales AS (
-    SELECT 
-        ar.Name AS ArtistName,
-        al.AlbumId,
-        al.Title AS AlbumTitle,
-        SUM(ii.Quantity) AS TotalSold
-    FROM 
-        InvoiceLine ii
-    JOIN 
-        Track t ON ii.TrackId = t.TrackId
-    JOIN 
-        Album al ON t.AlbumId = al.AlbumId
-    JOIN 
-        Artist ar ON al.ArtistId = ar.ArtistId
-    GROUP BY 
-        al.AlbumId
+  SELECT 
+    ar.Name AS ArtistName,
+    al.AlbumId,
+    al.Title AS AlbumTitle,
+    SUM(il.Quantity) AS TotalTracksSold
+  FROM Artist ar
+  JOIN Album al ON ar.ArtistId = al.ArtistId
+  JOIN Track t ON al.AlbumId = t.AlbumId
+  JOIN InvoiceLine il ON t.TrackId = il.TrackId
+  GROUP BY ar.Name, al.AlbumId, al.Title
+),
+RankedAlbums AS (
+  SELECT *,
+         ROW_NUMBER() OVER (PARTITION BY ArtistName ORDER BY TotalTracksSold DESC) AS Rank
+  FROM AlbumSales
 )
-SELECT 
-    ArtistName,
-    AlbumTitle,
-    MAX(TotalSold) AS MostSold
-FROM (
-    SELECT *,
-           RANK() OVER (PARTITION BY ArtistName ORDER BY TotalSold DESC) AS rnk
-    FROM AlbumSales
-) ranked
-WHERE rnk = 1;
+SELECT * FROM RankedAlbums
+WHERE Rank = 1;
 
 -- 5️⃣ Monthly sales trends in the year 2013
 SELECT 
