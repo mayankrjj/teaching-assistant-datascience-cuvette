@@ -8,7 +8,7 @@ This project demonstrates my ability to solve technical problems, explain concep
 
 ## 📁 Folder Structure
 
-📦 cuvette-ds-ta-assignment/ ├── 1_Python_ML.ipynb ├── 2_SQL_Queries.sql ├── 3_Tableau_Dashboard_Link.txt ├── 4_Excel_Analysis.xlsx ├── 5_AI_Tools_and_Reflection.md ├── 6_Teaching_Approach.md ├── video_walkthrough_link.txt └── README.md
+📦 cuvette-ds-ta-assignment/ ├── Python_ML.ipynb ├── Section2_SQL_Chinook_Assignment.sql ├── Tableau_Dashboard_Link.txt ├── Online Retail.xlsx ├──AI_Tools_and_Reflection.md ├── Teaching_Approach.md ├── video_walkthrough_link.txt └── README.md
 
 
 ---
