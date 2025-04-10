@@ -1,19 +1,18 @@
 Section 6: AI Tools & LLMs
 🧠 Option A: Prompt Engineering
 
-Prompt used:
+Prompt Used:
 
-“Create a formula in Excel to calculate the % contribution of each country to total sales in a pivot table. Total sales are in column B, grand total is in B30.”
+“How can I calculate each country’s percentage contribution to total sales in Excel when working with a Pivot Table? I want to make sure it doesn’t break when I refresh the data, and it should work across different country rows automatically.”
 
 AI Response:
 
-Use the formula =B2 / $B$30 in the adjacent column to calculate the percentage contribution. Format the result as percentage using the % style. Use absolute reference for the total cell so it doesn’t change when you drag the formula down.
+The AI suggested creating a formula using absolute cell references like =B2/$B$30 next to the Pivot Table, ensuring that the denominator (total sales) remains fixed. It also recommended excluding the Grand Total row from conditional formatting and enabling the “Preserve cell formatting on update” option in Pivot Table settings to prevent formatting loss after refresh.
 
 Reflection:
 
 What did the AI do well?
-It gave me a precise, working formula along with contextual tips like using absolute cell references and formatting as percentages.
+It offered not just the formula but practical advice on working with Pivot Tables dynamically — especially preserving formatting after refresh, which saved time.
 
 What did I have to modify or improve?
-I adjusted the formula slightly to match my specific cell range and clarified instructions for visual formatting and filtering.
-
+I adjusted the cell references to match my specific table layout and fine-tuned the formatting steps for better clarity during walkthrough recording.
